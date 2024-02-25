@@ -1,0 +1,73 @@
+Q1
+SELECT * FROM Orders WHERE Orders.ShippedDate > Orders.RequiredDate;
+***
+
+
+Q2
+SELECT Employees.Country FROM Employees;
+***
+
+
+Q3
+SELECT * FROM Employees WHERE Employees.ReportsTo IS NULL;
+***
+
+
+Q4
+SELECT Products.ProductName FROM Products WHERE Products.Discontinued = 1;
+***
+
+
+Q5
+SELECT [Order Details].OrderID FROM [Order Details] WHERE [Order Details].Discount <> 0;
+***
+
+
+Q6
+SELECT Customers.ContactName FROM Customers WHERE Customers.Region IS NULL;
+***
+
+
+Q7
+SELECT Customers.ContactName, Customers.Phone AS ContactNUmber FROM Customers WHERE Customers.Country = 'UK' OR Customers.Country = 'USA';
+***
+
+
+Q8
+SELECT Suppliers.CompanyName FROM Suppliers WHERE Suppliers.HomePage IS NOT NULL;
+***
+
+
+Q9
+SELECT Orders.ShipCountry AS CountryName FROM Orders WHERE YEAR(Orders.ShippedDate) = 1997;
+***
+
+
+Q10
+SELECT Orders.CustomerID FROM Orders WHERE Orders.ShippedDate IS NULL;
+***
+
+
+Q11
+SELECT Suppliers.SupplierID, Suppliers.CompanyName, Suppliers.City FROM Suppliers;
+***
+
+
+Q12
+SELECT COUNT(Employees.Country) AS CountryCount FROM Employees WHERE Employees.City = 'London';
+***
+
+
+Q13
+SELECT Products.ProductName FROM Products WHERE Products.Discontinued = 0;
+***
+
+
+Q14
+SELECT [Order Details].OrderID FROM [Order Details] WHERE ([Order Details].Discount < 0.1 OR [Order Details].Discount = 0.1) AND [Order Details].Discount > 0;
+***
+
+
+Q15
+SELECT EmployeeID, (Employees.FirstName+Employees.LastName) AS EmployeeName, Employees.HomePhone AS ContactNumber, Employees.Extension FROM Employees WHERE Employees.Region IS NULL;
+***
